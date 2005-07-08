@@ -9,7 +9,7 @@ our @ISA = qw(Exporter);
 
 our @EXPORT_OK = qw(check_ports);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 sub VERSION { $VERSION }
 
 sub check_ports {
@@ -141,6 +141,14 @@ Here is an example handler function you can use as a road map:
        }
     }
 
+=head1 HOW TO EXPAND ON IO::Socket::PortState
+
+This module's life came around as a result of wanting to monitor specific ports on several servers, specifically servers running cPanel (L<http://cpanel.net/>).
+To make it easier to do that and provide a model to make it easier for anyone to create a module that is "server specific" I've created L<IO::Socket::PortState::cPanel>
+
+If you want to do the same thing please use it as a guide, all you would need to do is change the hashrefs and package specific info and voila its all set :)
+
+If you do use L<IO::Socket::PortState::cPanel> as a model (and I hope you do so that using any IO::Socket::PortState::* module will have a specific consistent use) please reference it in the POD of your module as outlined in the POD of L<IO::Socket::PortState::cPanel>.
 
 =head1 AUTHOR
 
