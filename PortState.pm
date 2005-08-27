@@ -9,8 +9,7 @@ our @ISA = qw(Exporter);
 
 our @EXPORT_OK = qw(check_ports);
 
-our $VERSION = '0.02';
-sub VERSION { $VERSION }
+our $VERSION = '0.03';
 
 sub check_ports {
    my ($ip,$to,$pmhr,$proc) = @_;
